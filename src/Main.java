@@ -21,14 +21,12 @@ public class Main
 
         JSONParser parser = new JSONParser();
 
-        DBCursor cursor = coll.find(); // Cursor, to find values
-
         int moderate = 0;
         int high = 0;
         int very_high = 0;
         int low = 0;
         int very_low = 0;
-        try
+        try (DBCursor cursor = coll.find())
         {
             while (cursor.hasNext())
             {
@@ -58,10 +56,6 @@ public class Main
                         break;
                 }
             }
-        }
-        finally
-        {
-            cursor.close();
         }
         int total = high + very_high + low + moderate;
         System.out.println("Very High: " + very_high);
