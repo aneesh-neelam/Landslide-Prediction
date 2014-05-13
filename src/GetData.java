@@ -15,8 +15,8 @@ public class GetData
     {
         MongoClient mongoClient = new MongoClient("localhost"); // Connect to MongoDB
         DB db = mongoClient.getDB("landslide"); // Select DB
-
         DBCollection coll = db.getCollection("zones"); // Get Collection
+
         System.out.println("Total of " + coll.getCount() + " documents. \n"); // Get number of documents in collection
 
         JSONParser parser = new JSONParser();
@@ -28,16 +28,26 @@ public class GetData
 
                 JSONObject json = (JSONObject) (parser.parse(tmp.toString()));
                 String prediction = json.get("Landslide_Prediction_output").toString();
+                String rainfall = json.get("Rainfall").toString();
+                // TODO other attributes
                 int index = Output.fromName(prediction).code;
-                if (index < 0 || index > 5) System.out.println(index);
+                int rainfall_index = Rainfall.fromName(rainfall).code;
                 Data.output_count[index]++;
+                Data.attribute_count[index][rainfall_index]++;
             }
         }
+
         int total_prediction = 0;
+        int total_rainfall = 0;
         for (int i = 0; i < Output.length; i++)
         {
             total_prediction = total_prediction + Data.output_count[i];
+            for (int j = 0; j < Rainfall.length; j++)
+            {
+                total_rainfall = total_rainfall + Data.attribute_count[i][j];
+            }
         }
+        // TODO Prediction
         System.out.println("\nPredicted Landslide Output: ");
         System.out.println("Very High: " + Data.output_count[0]);
         System.out.println("High: " + Data.output_count[1]);
@@ -45,5 +55,6 @@ public class GetData
         System.out.println("Low: " + Data.output_count[3]);
         System.out.println("Very Low: " + Data.output_count[4]);
         System.out.println("Total calculated: " + total_prediction);
+        System.out.println("Total calculated: " + total_rainfall);
     }
 }
