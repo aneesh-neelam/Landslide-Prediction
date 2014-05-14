@@ -10,7 +10,9 @@ public class Main
 {
     public static void main(String args[]) throws UnknownHostException, ParseException
     {
-        GetData gData = new GetData();
-        gData.getNumber();
+        GetData getData = new GetData();
+        getData.getCount();
+        Calc calc = new Calc();
+        calc.calcTotalProb();
     }
 }
