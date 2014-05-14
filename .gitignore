@@ -16,5 +16,8 @@ hs_err_pid*
 
 # Libraries
 lib/*
-SequenceCoverApproach/lib/
+
+# Data
 *.csv
+*.xls
+*.xlsx

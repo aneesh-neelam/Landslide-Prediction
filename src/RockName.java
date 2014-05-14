@@ -10,7 +10,6 @@ public enum RockName
     sat(3, "Satyamangalam Group"),
     alkali(4, "Alkali Rocks");
 
-
     public int code;
     public String name;
 

@@ -10,7 +10,6 @@ public enum Lineament
     l167_2226(3, "0.00167-0.002226"),
     l2226_2783(4, "0.002226-0.002783");
 
-
     public int code;
     public String name;
 
