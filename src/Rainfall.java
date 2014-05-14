@@ -1,7 +1,3 @@
-/**
- * Created by Aneesh Neelam <neelam.aneesh@gmail.com> on 13/5/14.
- */
-
 public enum Rainfall
 {
     r1000_1200(0, "1000-1200"),

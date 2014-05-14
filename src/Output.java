@@ -1,7 +1,3 @@
-/**
- * Created by Aneesh Neelam <neelam.aneesh@gmail.com> on 13/5/14.
- */
-
 public enum Output
 {
     very_high(0, "very high"),
@@ -25,15 +21,15 @@ public enum Output
     {
         switch (code)
         {
-            case 1:
+            case 0:
                 return very_high;
-            case 2:
+            case 1:
                 return high;
-            case 3:
+            case 2:
                 return moderate;
-            case 4:
+            case 3:
                 return low;
-            case 5:
+            case 4:
                 return very_low;
             default:
                 return null;

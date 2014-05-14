@@ -1,10 +1,8 @@
 import org.json.simple.parser.ParseException;
 
+import javax.swing.*;
 import java.net.UnknownHostException;
 
-/**
- * Created by Aneesh Neelam <neelam.aneesh@gmail.com> on 18/4/14.
- */
 
 public class Main
 {
@@ -14,5 +12,15 @@ public class Main
         getData.getCount();
         Calc calc = new Calc();
         calc.calcTotalProb();
+
+        SwingUtilities.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                UI ui = new UI();
+                ui.setVisible(true);
+            }
+        });
     }
 }

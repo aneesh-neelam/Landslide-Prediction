@@ -1,7 +1,3 @@
-/**
- * Created by Aneesh Neelam <neelam.aneesh@gmail.com> on 13/5/14.
- */
-
 public enum Geomorphology
 {
     ridge(0, "Ridge type Structural Hills (Large)"),

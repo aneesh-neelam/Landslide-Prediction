@@ -1,7 +1,3 @@
-/**
- * Created by Aneesh Neelam <neelam.aneesh@gmail.com> on 13/5/14.
- */
-
 public enum Slope
 {
     s0_1(0, "0-1%"),

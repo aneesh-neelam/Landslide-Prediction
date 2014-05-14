@@ -3,19 +3,20 @@ Bayesian Classifier
 
 A java app that performs classification and prediction. Using Bayesian Classification technique.
 
-Just a small project to gain experience.
+Just a small project to gain experience. Done as a project for the Data Warehousing and Data Mining course.
 
 Things done:
 
-* Found count of every attribute with respective to Output
-* Calculated probability for Outputs
-* Calculated probability for all attributes with respective to Output
+* Found the count of every attribute with respect to each Output
+* Calculated probability for each Output
+* Calculated probability for all attributes with respect to each Output
+* Functional Java Swing UI
+* Predicting Output (Message Dialog)
 
 
 Things left:
 
-* Prediction
-* UI
+* Better UI (Java Swing is annoying)
 
 
 Requirements:

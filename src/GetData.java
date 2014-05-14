@@ -5,9 +5,6 @@ import org.json.simple.parser.ParseException;
 
 import java.net.UnknownHostException;
 
-/**
- * Created by Aneesh Neelam <neelam.aneesh@gmail.com> on 21/4/14.
- */
 
 public class GetData
 {
