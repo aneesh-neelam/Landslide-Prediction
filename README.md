@@ -22,5 +22,9 @@ Things left:
 Requirements:
 
 * The Landslide Zone data in a local MongoDB instance
+
+
+Libraries:
+
 * json-simple (1.1.1)
 * mongo-java driver (2.12.0)
